@@ -1,11 +1,11 @@
 
     //Runs on page load
-    window.onload = function() {
+    /*window.onload = function() {
         $('#crystal-one').on('click', crystal_one);
         $('#crystal-two').on('click', crystal_two);
         $('#crystal-three').on('click', crystal_three);
         $('#crystal-four').on('click', crystal_four);
-    }
+    }*/
 
 
     //Defining global varibles
@@ -50,16 +50,18 @@
     function winner() {
         wins++;
         $('#wins').html('Wins: ' + wins);
+        alert('Congrats, you win!');
         resetGame();
     };
 
     function loser() {
         loses++
         $('#loses').text('Loses: ' + loses);
+        alert('Sorry, you lose!');
         resetGame();
     };
 
-    //Stuff is happening here
+    //Here is the logic for all of the crystal click events
     $('#crystal-one').on('click', function() {
         totalValue += crystal_one;
         $('#total').html(totalValue);
